@@ -23,6 +23,13 @@ contract MERITPOINT {
               // the require statemnt that ensures that the student's merit points never drop below zero 
                meritPoints -= _points; //my function to reduce merit points
     }
-        
+        function checkGrade() public view returns (string memory) {
+        if (meritPoints >= 5) {
+            return "Pass";
+        } else {
+            return "Fail";
         }
+        //a view function that reads students meritpoints and returns the status either pass or fail 
+        }
+}
         
